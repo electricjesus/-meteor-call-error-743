@@ -1,0 +1,33 @@
+<head>
+  <title>meteor-call-error</title>
+</head>
+
+<body>
+  {{> testbutton}}
+  {{> error1}}
+  {{> error2}}
+  {{> error3}}
+</body>
+
+<template name="error1">
+    <div>
+       <h5>Error from a startup call:</h5>
+       {{message}}
+    </div>
+</template>
+<template name="error2">
+    <div>
+       <h5>Error inside an autorun call:</h5>
+       {{message}}
+    </div>
+</template>
+<template name="error3">
+    <div>
+       <h5>Error from inside an UI interaction:</h5>
+       {{message}}
+    </div>
+</template>
+
+<template name="testbutton">
+    <input type="button" value="Click me for an error" />
+</template>
