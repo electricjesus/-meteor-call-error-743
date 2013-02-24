@@ -17,17 +17,22 @@ if (Meteor.isClient) {
   Template.error1.message = function() {
     try {
        return Session.get("error1");
-    } catch(err) {}
+    } catch(err) {
+    }
   }
   Template.error2.message = function() {
     try {
        return Session.get("error2");
-    } catch(err) {}
+    } catch(err) {
+	console.log("Got an exception calling Session.get", err);
+    }
   }
   Template.error3.message = function() {
     try {
        return Session.get("error3");
-    } catch(err) {}
+    } catch(err) {
+	console.log("Got an exception calling Session.get", err);
+    }
   }
 
   Meteor.startup(function() {
